@@ -1,0 +1,49 @@
+/*!
+Theme Name: Holywood
+Theme URI: http://holywoodboards.com/
+Author: Maksym Chertienkov
+Author URI: https://www.facebook.com/max.chort
+Description: Holywood Boards WP Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: holywoodboards
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Variables and Mixins
+# Reset Css
+# Typography
+# Core css with main layout styles
+# Partials for every component which is used as page-template
+--------------------------------------------------------------*/
+
+@import "variables/variables";
+@import "mixins/mixins";
+
+/*--------------------------------------------------------------
+# Reset CSS
+--------------------------------------------------------------*/
+@import "reset";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Core CSS
+--------------------------------------------------------------*/
+@import "core/core";
+
+/*--------------------------------------------------------------
+# Partials
+--------------------------------------------------------------*/
+@import "partials/top-section";
+@import "partials/homepage";

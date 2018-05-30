@@ -1,0 +1,57 @@
+/* Font Face Mixin
+   Example of usage: @include font-face('gotham', '/fonts/gotham', 400);
+*/
+@mixin font-face($font-name, $file-name, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.ttf');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+/* Clearfix Mixin (in case you are oldschool and still use floats :) ) */
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/* Background Gradient
+   .gradient {
+  		@include gradient(#07c, #06f, vertical);
+	}
+ */
+@mixin gradient($start-color, $end-color, $orientation) {
+	background: $start-color;
+	@if $orientation == 'vertical' {
+		background: -webkit-linear-gradient(top, $start-color, $end-color);
+		background: linear-gradient(to bottom, $start-color, $end-color);
+	} @else if $orientation == 'horizontal' {
+		background: -webkit-linear-gradient(left, $start-color, $end-color);
+		background: linear-gradient(to right, $start-color, $end-color);
+	} @else {
+		background: -webkit-radial-gradient(center, ellipse cover, $start-color, $end-color);
+		background: radial-gradient(ellipse at center, $start-color, $end-color);
+	}
+}
+
+/* Quick fonts settings */
+@mixin font($font-family, $font-size, $line-height, $font-color, $font-weight: normal, $text-transform: none) {
+	font-family: $font-family;
+	font-size: $font-size;
+	line-height: $line-height;
+	color: $font-color;
+	font-weight: $font-weight;
+	text-transform: $text-transform;
+}
+
+/* Quick Flex settings */
+@mixin flex($justify:space-between, $align:center, $wrap:wrap) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
+}

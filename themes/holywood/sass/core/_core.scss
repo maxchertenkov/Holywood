@@ -1,0 +1,72 @@
+/* Core styles that are used on all pages of the website (wrappers, general styles) */
+
+/* General Styling */
+body {
+  background: $body_background;
+  position: relative;
+}
+
+/* Main Wrapper Size */
+.wrapper {
+  width: $wrapper_desktop_width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @media #{$tablet} {
+    width: $wrapper_tablet_width;
+  }
+  @media #{$mobile} {
+    width: $wrapper_mobile_width;
+    padding: 0 10px;
+  }
+}
+
+/* Header Styles */
+header {
+  background: #fff;
+  padding: 25px 0;
+  .wrapper {
+    @include flex();
+    .logo {
+      @include font($font_main, 24px, 20px, #000, bold, uppercase);
+      text-decoration: none;
+    }
+    .menu {
+      @include flex();
+      .menu-item {
+        margin: 0 25px 0 0;
+      }
+      a {
+        @include font($font_main, 16px, 20px, #000, normal, uppercase);
+        text-decoration: none;
+        padding-bottom: 3px;
+        &:hover {
+          border-bottom: 2px solid #000;
+        }
+      }
+    }
+  }
+}
+
+/* Footer Styles */
+footer {
+  background: grey;
+  padding: 35px 0 0;
+  .menu {
+    li {
+      margin: 0 0 5px;
+    }
+    a {
+      @include font($font_main, 16px, 20px, #fff, normal);
+      text-decoration: none;
+    }
+  }
+  .footer_copyright {
+    padding: 15px 0;
+    text-align: center;
+    @include font($font_main, 16px, 20px, #fff, 100);
+  }
+}
+
+/* Forms styles */
+
+/* Additional CSS for overwriting some styles */
