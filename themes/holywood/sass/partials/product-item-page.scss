@@ -1,0 +1,87 @@
+.product_item_page {
+  .top_blk {
+    background: url(images/dist/slide_1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    .wrapper {
+      @include flex(center, center);
+      height: 400px;
+    }
+    .board_name {
+      @include font($font_main, 75px, 50px, #000, 300, uppercase);
+    }
+  }
+  .product_wrap {
+    @include flex(space-between, flex-start);
+    padding: 50px 0;
+    .product_content {
+      width: 70%;
+      .product_discription_blk {
+        .product_name {
+          @include font($font_main, 30px, 30px, #000, 300, uppercase);
+          margin: 0 0 25px;
+        }
+        .product_description {
+          @include font($font_main, 16px, 24px, #000, 300);
+          margin: 0 0 15px;
+        }
+        .product_specs {
+          @include font($font_main, 16px, 24px, #000, 300);
+          margin: 0 0 10px;
+          .spec_title {
+            font-weight: 500;
+          }
+        }
+      }
+      .camber_type {
+        margin: 25px 0;
+        .description_title {
+          @include font($font_main, 22px, 24px, #000, 300, uppercase);
+          margin: 50px 0 25px;
+        }
+        img {
+          margin: 0 0 25px;
+        }
+      }
+      table {
+        width: 100%;
+        margin: 0 0 25px;
+        tr, td, th {
+          border: 1px solid #000;
+          padding: 2px;
+        }
+      }
+    }
+    .product_image_wrap {
+      width: 25%;
+      .product_big_image {
+        margin: 0 auto 25px;
+        text-align: center;
+        img {
+          width: 100px;
+          margin: 0 10px;
+        }
+      }
+      .product_miniature_wrap {
+        @include flex(space-between);
+        .item {
+          cursor: pointer;
+          margin: 0 5px 10px;
+          text-align: center;
+          .image_wrap {
+            margin: 0 0 10px;
+            img {
+              width: 25px;
+              margin: 0 2px;
+            }
+          }
+          .size {
+            text-align: center;
+            @include font($font_main, 14px, 22px, #000, 300);
+          }
+        }
+      }
+    }
+  }
+}
