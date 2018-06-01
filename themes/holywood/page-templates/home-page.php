@@ -31,19 +31,19 @@ get_header();
         <div class="wrapper">
             <h2 class="section_title">Доски</h2>
             <div class="product_list_wrap">
-                <a class="item">
+                <a class="item" href="/boards/seven-samurai/">
                     <div class="deck_img"></div>
                     <p>Доска 1</p>
                 </a>
-                <a class="item">
+                <a class="item" href="/boards/seven-samurai/">
                     <div class="deck_img"></div>
                     <p>Доска 2</p>
                 </a>
-                <a class="item">
+                <a class="item" href="/boards/seven-samurai/">
                     <div class="deck_img"></div>
                     <p>Доска 3</p>
                 </a>
-                <a class="item">
+                <a class="item" href="/boards/seven-samurai/">
                     <div class="deck_img"></div>
                     <p>Доска 4</p>
                 </a>
